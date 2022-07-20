@@ -1,5 +1,6 @@
 import "./App.css";
 import Header from "./component/Header/Header";
+
 import Home from "./component/Home/Home";
 import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
 import Checkout from "./component/Checkout/Checkout";
@@ -57,11 +58,9 @@ function App() {
           <Route
             path="/payment"
             element={
-              <>
-                <Elements stripe={promise}>
-                  <Payment />
-                </Elements>
-              </>
+              <Elements stripe={promise}>
+                <Payment />
+              </Elements>
             }
           />
 
@@ -76,20 +75,13 @@ function App() {
           />
 
           <Route
-            path="/Footer"
-            element={
-              <>
-                <Footer />
-              </>
-            }
-          />
-
-          <Route
             path="/"
             element={
               <>
                 <Header />
+
                 <Home />
+                <Footer />
               </>
             }
           />
